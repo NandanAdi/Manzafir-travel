@@ -109,6 +109,26 @@ const Navbar = () => {
           >
             Home
           </Link>
+
+
+              <Link 
+                to="/about"
+                className="text-gray-500 hover:text-sky-200 font-medium transition"
+              >
+                About Us
+              </Link>
+              <Link 
+                to="/contact"
+                className="text-gray-500 hover:text-sky-200 font-medium transition"
+              >
+                Contact Us
+              </Link>
+              <Link 
+                to="/blog"
+                className="text-gray-500 hover:text-sky-200 font-medium transition"
+              >
+                Blog
+              </Link>
               <Link
                 to="/login"
                 className="text-gray-500 hover:text-sky-200 font-medium transition"
@@ -120,24 +140,6 @@ const Navbar = () => {
                 className="text-gray-500 hover:text-sky-200 font-medium transition"
               >
                 Sign Up
-              </Link>
-              <Link 
-                to="/about"
-                className="text-gray-500 hover:text-sky-200 font-medium transition"
-              >
-                About Us
-              </Link>
-              <Link 
-                to="/contact"
-                className="text-sky-500 hover:text-sky-200 font-medium transition"
-              >
-                Contact Us
-              </Link>
-              <Link 
-                to="/blog"
-                className="text-sky-500 hover:text-sky-200 font-medium transition"
-              >
-                Blog
               </Link>
               
 

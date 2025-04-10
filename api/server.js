@@ -1,12 +1,15 @@
+require("dotenv").config();
+
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const User = require('./models/User')
 const Match  = require('./models/Match')
+const cors = require("cors");
+const nodemailer = require("nodemailer");
 dotenv.config();
 connectDB();
 
-const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -16,6 +19,34 @@ app.use(express.json());
 app.use('/api/packages', require('./routes/packageRoutes'));
 app.use('/api/tours', require('./routes/tourRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
+
+//Contact
+app.post("/api/contact", async (req, res) => {
+  const { name, email, phone, message } = req.body;
+ // Setup Nodemailer Transport
+ let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+let mailOptions = {
+  from:`"Manzafir" ${process.env.EMAIL_USER}`,
+  to: process.env.EMAIL_USER, // Send email to yourself
+  subject: "New Contact Form Submission",
+  text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+};
+
+try {
+  await transporter.sendMail(mailOptions);
+  res.status(200).json({ message: "Email sent successfully!" });
+} catch (error) {
+  res.status(500).json({ message: "Failed to send email.", error });
+}
+});
+
 
 //Other Routes for Matching
 app.get('/users', async (req, res) => {

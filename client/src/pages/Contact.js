@@ -52,7 +52,7 @@ const ContactPage = () => {
       >
         <div className="absolute inset-0 bg-black opacity-70 backdrop-blur-2xl"></div>
 
-      <div className="flex-grow flex justify-center items-center p-6 pt-20">
+      <div className="flex-grow flex justify-center items-center p-15 pt-20">
         <form 
           className="bg-[rgb(31,41,56)] text-white transition duration-500 
               transform hover:scale-105  p-6 rounded-lg shadow-4xl w-full max-w-md"
@@ -95,7 +95,7 @@ const ContactPage = () => {
     📞 <a href="tel:7039366269" className="ml-2 text-blue-400 hover:underline">703-936-6269</a>
   </p>
   <p className="mt-2 flex items-center">
-    ✉️ <a href="mailto:adminish29@gmail.com" className="ml-2 text-blue-400 hover:underline">adminish29@gmail.com</a>
+    ✉️ <a href="mailto:adminish29@gmail.com" className="ml-2 text-blue-400 hover:underline">help.manzafir@gmail.com</a>
   </p>
 </div>
 
@@ -115,7 +115,11 @@ const ContactPage = () => {
   <div className="mt-6">
     <h2 className="text-xl font-semibold">Hours</h2>
     <ul className="mt-2">
-      <li>Monday - Friday: <span className="text-blue-300">9:00am - 5:00pm</span></li>
+      <li>Monday <span className="text-blue-300">9:00am - 5:00pm</span></li>
+      <li>Tuesday: <span className="text-blue-300">9:00am - 5:00pm</span></li>
+      <li>Wednesday: <span className="text-blue-300">9:00am - 5:00pm</span></li>
+      <li>Thusday: <span className="text-blue-300">9:00am - 5:00pm</span></li>
+      <li>Friday: <span className="text-blue-300">9:00am - 5:00pm</span></li>
       <li>Saturday: <span className="text-blue-300">9:00am - 12:00pm</span></li>
       <li>Sunday: <span className="text-blue-300">Closed</span></li>
     </ul>
