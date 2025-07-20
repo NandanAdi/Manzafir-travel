@@ -36,7 +36,7 @@
 - Nodemailer (contact form)
 - JWT (Authentication)
 - GitHub & Git LFS (versioning)
-- 📌 *Firebase Authentication planned for future versions*
+- Firebase Authentication
 
 ---
 
